@@ -1,3 +1,4 @@
+package Arrays;
 
 public class Diagonal {
 	public static void main(String[] args) {

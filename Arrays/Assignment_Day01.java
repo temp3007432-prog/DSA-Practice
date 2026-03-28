@@ -1,3 +1,4 @@
+package Arrays;
 public class Assignment_Day01 {
 
 	public static void main(String[] args) {
