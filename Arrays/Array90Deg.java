@@ -13,7 +13,7 @@ public class Array90Deg {
             System.out.println();
         }
 
-        //Transposeee
+        //Transpose
         for (int i = 0; i < arr.length; i++) {
             for (int j = i+1; j < arr[i].length; j++) {
                 int temp = arr[i][j];
@@ -22,7 +22,7 @@ public class Array90Deg {
             }
         }
 
-        //Reverseee
+        //Reverse
         for (int i = 0; i < arr.length; i++) {
             int left = 0;
             int right = arr[i].length - 1; // Use arr[i].length for safety
