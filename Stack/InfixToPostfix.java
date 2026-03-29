@@ -7,15 +7,15 @@ public class InfixToPostfix {
     // SCOPE//
     // S: Scan from left to right.
     // C: Copy operands to output.
-    // O: operands go to stack.
+    // O: operator go to stack.
     // P: Parenthesis '(' goes to stack, when you see ')' then pop until you get
     // '('.
     // E: Empty the stack at the end.
 
     public static void main(String[] args) {
-        String infix = "A +B* C";
-        System.out.println(infix);
-        System.out.println(conversion(infix));
+        String infix = "A+B*C-D/E^F";
+        System.out.println("Infix is : " + infix);
+        System.out.println("Postfix is : " + conversion(infix));
     }
 
     private static String conversion(String s) {
