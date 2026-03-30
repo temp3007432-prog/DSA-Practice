@@ -19,18 +19,26 @@ public class PostfixEvaluation {
             if (c == ' ') continue;
             if (Character.isLetterOrDigit(c)) {
                 stack.push(c - '0');
-            }
-
-            else if (c == '^' || c == '*' || c == '/' || c == '+' || c == '-') {
+            } else {
                 int temp2 = stack.pop();
                 int temp1 = stack.pop();
 
-                switch(c){
-                    case '^': stack.push((int) Math.pow(temp1,temp2)); break;
-                    case '*': stack.push(temp1 * temp2); break;
-                    case '/': stack.push(temp1 / temp2); break;
-                    case '+': stack.push(temp1 + temp2); break;
-                    case '-': stack.push(temp1 - temp2); break;
+                switch (c) {
+                    case '^':
+                        stack.push((int) Math.pow(temp1, temp2));
+                        break;
+                    case '*':
+                        stack.push(temp1 * temp2);
+                        break;
+                    case '/':
+                        stack.push(temp1 / temp2);
+                        break;
+                    case '+':
+                        stack.push(temp1 + temp2);
+                        break;
+                    case '-':
+                        stack.push(temp1 - temp2);
+                        break;
                 }
             }
         }
