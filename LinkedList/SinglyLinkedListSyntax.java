@@ -73,15 +73,19 @@ public class SinglyLinkedListSyntax {
         }
 
         public void addAtPosition(int data, int position){
+            if(head == null){
+                addAtBegining(data);
+                return;
+            }
             Node myNode = new Node(data);
             Node temp = head;
-            int count = -1;
-            while(temp.next != null && count < position){
+
+            for (int i = 0; i < position - 1 && temp != null; i++) {
                 temp = temp.next;
-                count++;
             }
-            myNode = temp.next;
-            temp = myNode;
+
+            myNode.next = temp.next;
+            temp.next = myNode;
         }
     }
 }
